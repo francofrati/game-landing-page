@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --darkblue: #020419;
+  --poorwhite: #FFFFFF78
+}
+
+body {
+  background-color: var(--darkblue);
+  color: var(--poorwhite);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.video-section{
+  position: relative;
+  margin-bottom: -10px;
+}
+
+.video-section video{
+  width: 100vw;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.video-section .button-container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+  height: 60px;
+}
+
+.video-section .button-container .top-l-border{
+  border-left: 3px solid #AF9EA4;
+  border-top: 3px solid #AF9EA4;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 0;
+  top: 0;
+}
+
+.video-section .button-container .bottom-l-border{
+  border-left: 3px solid #270D57;
+  border-bottom: 3px solid #270D57;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 0;
+  bottom: 0;
+}
+
+.video-section .button-container .top-r-border{
+  border-right: 3px solid #2F5B74;
+  border-top: 3px solid #2F5B74;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 0;
+  top: 0;
+}
+
+.video-section .button-container .bottom-r-border{
+  border-right: 3px solid #650A6A;
+  border-bottom: 3px solid #650A6A;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 0;
+  bottom: 0;
+}
+
+.video-section button{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 290px;
+  height: 50px;
+  font-weight: 600;
+  background-color: darkgray;
+  font-size: 2rem;
+  color: var(--poorwhite);
+  border: none;
+  cursor: pointer;
+}
+
+footer{
+  width: 100vw;
+  background-color: #450751;
+  padding-bottom: 30px;
+}
+
+footer #socialMedia{
+  background-color: #770F4A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+footer #legalSection{
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+footer #legalSection span{
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+}
+
+footer .copyright{
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: small;
+  width: 60%;
+  text-align: center;
+}
