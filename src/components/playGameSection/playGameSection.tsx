@@ -3,7 +3,7 @@ import GameVideo from "../../assets/video.mp4";
 function PlayGameSection() {
   return (
     <section className="video-section">
-      <video src={GameVideo} loop muted></video>
+      <video src={GameVideo} loop muted autoPlay></video>
       <div className="button-container">
         <button type="button">PLAY NOW</button>
         <div className="top-l-border"></div>

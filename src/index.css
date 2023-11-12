@@ -1,41 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-:root{
+:root {
   --darkblue: #020419;
-  --poorwhite: #FFFFFF78
+  --poorwhite: #ffffff78;
+}
+
+html {
+  scroll-snap-type: y mandatory;
 }
 
 body {
   background-color: var(--darkblue);
   color: var(--poorwhite);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   overflow-x: hidden;
   margin: 0;
+  background-image: url("topSectionBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  scroll-behavior: smooth;
 }
 
-.video-section{
+.video-section {
   position: relative;
   margin-bottom: -10px;
+  scroll-snap-align: end;
 }
 
-.video-section video{
+.video-section video {
   width: 100vw;
   height: 70vh;
   object-fit: cover;
 }
 
-.video-section .button-container{
+.video-section .button-container {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 300px;
   height: 60px;
 }
 
-.video-section .button-container .top-l-border{
-  border-left: 3px solid #AF9EA4;
-  border-top: 3px solid #AF9EA4;
+.video-section .button-container button {
+  color: white;
+  background-image: url("playNowButtonBg.png");
+}
+
+.video-section .button-container .top-l-border {
+  border-left: 3px solid #af9ea4;
+  border-top: 3px solid #af9ea4;
   position: absolute;
   width: 15px;
   height: 15px;
@@ -43,9 +60,9 @@ body {
   top: 0;
 }
 
-.video-section .button-container .bottom-l-border{
-  border-left: 3px solid #270D57;
-  border-bottom: 3px solid #270D57;
+.video-section .button-container .bottom-l-border {
+  border-left: 3px solid #270d57;
+  border-bottom: 3px solid #270d57;
   position: absolute;
   width: 15px;
   height: 15px;
@@ -53,9 +70,9 @@ body {
   bottom: 0;
 }
 
-.video-section .button-container .top-r-border{
-  border-right: 3px solid #2F5B74;
-  border-top: 3px solid #2F5B74;
+.video-section .button-container .top-r-border {
+  border-right: 3px solid #2f5b74;
+  border-top: 3px solid #2f5b74;
   position: absolute;
   width: 15px;
   height: 15px;
@@ -63,9 +80,9 @@ body {
   top: 0;
 }
 
-.video-section .button-container .bottom-r-border{
-  border-right: 3px solid #650A6A;
-  border-bottom: 3px solid #650A6A;
+.video-section .button-container .bottom-r-border {
+  border-right: 3px solid #173a56;
+  border-bottom: 3px solid #173a56;
   position: absolute;
   width: 15px;
   height: 15px;
@@ -73,11 +90,11 @@ body {
   bottom: 0;
 }
 
-.video-section button{
+.video-section button {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 290px;
   height: 50px;
   font-weight: 600;
@@ -88,14 +105,15 @@ body {
   cursor: pointer;
 }
 
-footer{
+footer {
   width: 100vw;
   background-color: #450751;
   padding-bottom: 30px;
+  scroll-snap-align: end;
 }
 
-footer #socialMedia{
-  background-color: #770F4A;
+footer #socialMedia {
+  background-color: #770f4a;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,7 +123,7 @@ footer #socialMedia{
   padding-bottom: 10px;
 }
 
-footer #legalSection{
+footer #legalSection {
   display: flex;
   margin-top: 30px;
   flex-wrap: wrap;
@@ -117,17 +135,92 @@ footer #legalSection{
   padding-bottom: 10px;
 }
 
-footer #legalSection span{
+footer #legalSection span {
   cursor: pointer;
   font-weight: 600;
   color: white;
 }
 
-footer .copyright{
+footer .copyright {
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   font-size: small;
   width: 60%;
   text-align: center;
+}
+
+#topSection {
+  height: 100dvh;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+#topSection h1 {
+  font-size: 96px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+#topSection .content {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+#topSection #platformsSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10%;
+}
+
+#topSection .arrow-container {
+  display: grid;
+  place-content: center;
+  opacity: 0.4;
+}
+
+#forestSection {
+  background-color: #020419;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  scroll-snap-align: start;
+}
+
+#forestSection h2 {
+  background-clip: text;
+  color: transparent;
+  background-image: url("topSectionBg.jpg");
+  background-position: center;
+  text-align: center;
+  font-size: 82px;
+  font-weight: 700
+}
+
+#forestSection article {
+  width: 100vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: start;
+  gap: 5%;
+}
+
+#forestSection article img {
+  height: 300px;
+}
+
+#forestSection article p {
+  margin-bottom: 0px;
+  font-size: 24px;
+max-width: 700px;
 }
